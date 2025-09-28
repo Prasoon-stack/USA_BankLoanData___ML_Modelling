@@ -1,5 +1,24 @@
 # Bank Loan Default Prediction: Machine Learning Project 🚀
 
+# Quick Summary 🚀
+
+**Objective:** Predict loan defaults using the bank’s loan dataset to enable proactive risk management.
+
+**Tech Stack:** Python (Pandas, Scikit-learn, XGBoost, LightGBM), imbalanced-learn (SMOTE), Matplotlib/Seaborn for visualization.
+
+**Workflow & Techniques:**
+- **Data Cleaning & EDA:** Removed duplicates, handled missing values, outlier detection via IQR.
+- **Feature Engineering:** Categorical encoding (ordinal & one-hot), log transformation for skewed features, derived temporal features from issue dates.
+- **Class Balancing:** Applied **SMOTE** to address target imbalance.
+- **Models Tested:**  
+  1. Logistic Regression (baseline + SMOTE + PCA) → Accuracy: 0.6658  
+  2. Tree-based Models (Random Forest, XGBoost, LightGBM) → Accuracy: 0.9125  
+  3. Tree Models + Time-series features → Accuracy: 0.8561
+- **Evaluation:** Accuracy, precision, recall, F1-score; feature importance analysis highlighted `int_rate`, `term`, and `loan_amount` as key predictors.
+
+**Key Insight:** Tree-based models significantly outperform linear models, and incorporating temporal features provides actionable insights into loan default risk progression.
+
+
 ## Project Overview 📊
 
 This project builds upon the existing **Bank Loan Report dataset**, leveraging it to develop machine learning models for **predicting loan defaults**. The goal is to identify high-risk loans before they occur, enabling proactive risk management for the bank.  
